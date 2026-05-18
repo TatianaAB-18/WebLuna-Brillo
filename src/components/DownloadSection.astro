@@ -57,21 +57,13 @@
 
         <!-- Right: Beautiful QR Code container -->
         <div class="flex items-center gap-4 bg-white/10 p-3.5 rounded-3xl border border-white/20 shadow-xs hover:scale-102 transition-transform duration-300 max-w-[280px]">
-          <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center p-1.5 border border-brand-peach/10 shadow-3xs flex-shrink-0">
-            <!-- Sleek styled vector mock QR code -->
-            <svg class="w-full h-full text-brand-peach" viewBox="0 0 100 100" fill="currentColor">
-              <!-- Finder Patterns -->
-              <path d="M 10 10 H 35 V 35 H 10 Z M 15 15 V 30 H 30 V 15 Z M 20 20 H 25 V 25 H 20 Z" />
-              <path d="M 65 10 H 90 V 35 H 65 Z M 70 15 V 30 H 85 V 15 Z M 75 20 H 80 V 25 H 75 Z" />
-              <path d="M 10 65 H 35 V 90 H 10 Z M 15 70 V 85 H 30 V 70 Z M 20 75 H 25 V 80 H 20 Z" />
-              <!-- Data dots -->
-              <path d="M 45 10 H 50 V 15 H 45 Z M 55 10 H 60 V 15 H 55 Z M 45 20 H 55 V 25 H 45 Z M 60 20 H 65 V 25 H 60 Z M 50 30 H 55 V 35 H 50 Z M 60 30 H 65 V 35 H 60 Z" />
-              <path d="M 10 45 H 15 V 50 H 10 Z M 20 45 H 30 V 50 H 20 Z M 35 45 H 40 V 50 H 35 Z M 45 45 H 55 V 50 H 45 Z M 60 45 H 65 V 50 H 60 Z M 70 45 H 85 V 50 H 70 Z" />
-              <path d="M 15 55 H 25 V 60 H 15 Z M 30 55 H 35 V 60 H 30 Z M 40 55 H 45 V 60 H 40 Z M 50 55 H 55 V 60 H 50 Z M 60 55 H 70 V 60 H 60 Z M 80 55 H 85 V 60 H 80 Z" />
-              <path d="M 45 65 H 50 V 70 H 45 Z M 55 65 H 60 V 70 H 55 Z M 65 65 H 70 V 75 H 65 Z M 75 65 H 80 V 70 H 75 Z M 85 65 H 90 V 70 H 85 Z" />
-              <path d="M 45 75 H 50 V 80 H 45 Z M 55 75 H 60 V 80 H 55 Z M 75 75 H 80 V 85 H 75 Z M 85 75 H 90 V 85 H 85 Z" />
-              <path d="M 45 85 H 55 V 90 H 45 Z M 60 85 H 65 V 90 H 60 Z M 70 85 H 75 V 90 H 70 Z" />
-            </svg>
+          <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center p-1.5 border border-brand-peach/10 shadow-3xs flex-shrink-0 overflow-hidden">
+            <img 
+              src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/TatianaAB-18/Luna-BrilloV/releases/download/1.0.0/app-release.apk&color=e88a76&bgcolor=ffffff&qzone=1" 
+              alt="Código QR de descarga Luna y Brillo" 
+              class="w-full h-full rounded-xl object-contain"
+              loading="lazy"
+            />
           </div>
           <div class="text-left">
             <h4 class="font-bold text-xs text-white leading-tight">Escanea el código QR</h4>
