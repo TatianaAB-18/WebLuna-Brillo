@@ -1,0 +1,96 @@
+---
+---
+<header class="sticky top-4 z-50 mt-4 mx-4 lg:mx-12 px-6 py-4 rounded-3xl glass-panel shadow-xs transition-all duration-300 flex items-center justify-between border border-brand-soft-pink">
+  <!-- Logo -->
+  <a href="#" class="flex items-center gap-3 group">
+    <div class="relative w-11 h-11 flex items-center justify-center bg-gradient-to-br from-brand-peach/10 to-brand-rose/10 rounded-2xl shadow-2xs group-hover:scale-105 transition-transform duration-300 p-0.5 border border-brand-peach/20">
+      <img src="/images/app-logo.png" alt="Luna y Brillo" class="w-full h-full object-contain rounded-xl" />
+      <!-- Sparkle -->
+      <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-rose opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-brand-coral border border-white"></span>
+      </span>
+    </div>
+    <div>
+      <span class="font-display font-bold text-xl tracking-wide bg-gradient-to-r from-brand-peach to-brand-rose bg-clip-text text-transparent">Luna y Brillo</span>
+      <span class="block text-[10px] text-stone-500 font-medium tracking-widest uppercase">Cuidado Personal</span>
+    </div>
+  </a>
+
+  <!-- Desktop Navigation -->
+  <nav class="hidden md:flex items-center gap-8 font-semibold text-stone-600">
+    <a href="#" class="hover:text-brand-peach transition-colors duration-200">Inicio</a>
+    <a href="#features" class="hover:text-brand-peach transition-colors duration-200">Características</a>
+    <a href="#showcase" class="hover:text-brand-peach transition-colors duration-200">Interactuar</a>
+    <a href="#download" class="hover:text-brand-peach transition-colors duration-200">Descargar</a>
+  </nav>
+
+  <!-- CTA Download -->
+  <div class="flex items-center gap-3">
+    <a 
+      href="#download" 
+      class="bg-brand-peach hover:bg-brand-peach-hover text-white px-5 py-2.5 rounded-2xl font-bold shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 text-sm md:text-base flex items-center gap-2"
+    >
+      <span>Instalar App</span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+      </svg>
+    </a>
+    
+    <!-- Mobile Menu Button (Hamburger) -->
+    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl hover:bg-brand-soft-pink text-stone-600 transition-colors" aria-label="Abrir Menú">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-brand-cream/95 backdrop-blur-md hidden flex-col justify-center items-center gap-8 p-6 transition-all duration-300">
+  <!-- Close Button -->
+  <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 rounded-xl hover:bg-brand-soft-pink text-stone-600" aria-label="Cerrar Menú">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
+  </button>
+  
+  <a href="#" class="font-display font-bold text-3xl text-brand-peach hover:scale-105 transition-transform">Inicio</a>
+  <a href="#features" class="font-display font-bold text-3xl text-brand-peach hover:scale-105 transition-transform">Características</a>
+  <a href="#showcase" class="font-display font-bold text-3xl text-brand-peach hover:scale-105 transition-transform">Interactuar</a>
+  <a href="#download" class="font-display font-bold text-3xl text-brand-peach hover:scale-105 transition-transform">Descargar</a>
+  
+  <a 
+    href="#download" 
+    class="mt-6 bg-brand-peach text-white px-8 py-4 rounded-3xl font-bold shadow-md text-lg flex items-center gap-2 hover:scale-105 transition-transform"
+  >
+    <span>Descargar APK</span>
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+    </svg>
+  </a>
+</div>
+
+<script>
+  const btnOpen = document.getElementById('mobile-menu-btn');
+  const btnClose = document.getElementById('mobile-menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const links = mobileMenu?.querySelectorAll('a');
+
+  function toggleMenu() {
+    mobileMenu?.classList.toggle('hidden');
+    mobileMenu?.classList.toggle('flex');
+    document.body.classList.toggle('overflow-hidden');
+  }
+
+  btnOpen?.addEventListener('click', toggleMenu);
+  btnClose?.addEventListener('click', toggleMenu);
+  
+  links?.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenu?.classList.contains('flex')) {
+        toggleMenu();
+      }
+    });
+  });
+</script>

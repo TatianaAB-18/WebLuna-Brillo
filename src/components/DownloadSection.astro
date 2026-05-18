@@ -1,0 +1,130 @@
+---
+---
+<section id="download" class="py-20 px-4 sm:px-6 lg:px-12 max-w-5xl mx-auto scroll-mt-24">
+  
+  <div class="relative bg-gradient-to-br from-brand-peach to-brand-rose p-8 sm:p-12 md:p-16 rounded-[40px] shadow-lg text-white overflow-hidden border border-white/20">
+    
+    <!-- Sparkles and circles in background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+      <div class="absolute -top-12 -left-12 w-64 h-64 rounded-full bg-white blur-2xl"></div>
+      <div class="absolute -bottom-16 -right-16 w-80 h-80 rounded-full bg-brand-coral blur-2xl"></div>
+      
+      <!-- Shiny sparkles SVG -->
+      <div class="absolute top-[20%] right-[10%] w-10 h-10">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/></svg>
+      </div>
+      <div class="absolute bottom-[20%] left-[10%] w-8 h-8">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/></svg>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative z-10 text-center max-w-3xl mx-auto flex flex-col items-center">
+      <!-- Icon badge -->
+      <div class="w-16 h-16 bg-white/25 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-white/20 animate-bounce" style="animation-duration: 3s;">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+      </div>
+
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-4 leading-tight">
+        Lleva a Luna y Brillo contigo
+      </h2>
+      <p class="text-white/90 font-medium text-base sm:text-lg mb-8 leading-relaxed max-w-xl">
+        Descarga la aplicación directamente en formato APK de forma 100% segura y gratuita. Empieza a brillar y cuidar de ti hoy mismo.
+      </p>
+
+      <!-- Direct APK Download Section with Actual QR Code -->
+      <div class="flex flex-col md:flex-row items-center gap-8 justify-center mb-12 w-full">
+        <!-- Left: Download Button & Info -->
+        <div class="flex flex-col items-center md:items-start gap-3">
+          <a 
+            href="/downloads/lunaybrillo-latest.apk" 
+            download
+            class="bg-white hover:bg-stone-50 text-brand-peach px-8 py-4.5 rounded-3xl font-extrabold shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-lg flex items-center justify-center gap-3 w-full sm:w-auto group"
+          >
+            <svg class="w-6 h-6 group-hover:animate-pulse" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+            </svg>
+            <span>Descargar APK Directo</span>
+          </a>
+          <p class="text-[11px] text-white/70 font-semibold uppercase tracking-wider text-center md:text-left">
+            Compatible con Android 8.0 o superior
+          </p>
+          <div class="flex items-center gap-1.5 mt-1.5 px-2.5 py-1 rounded-lg bg-black/15 border border-white/10 text-[9px] text-white/60 font-mono tracking-normal select-all">
+            <span class="font-bold text-white/40 uppercase">SHA256:</span>
+            <span>ea61fb4c2fcbe408da1be707c5d689a11c4746d8e1dd625733143edee14e60fa</span>
+          </div>
+        </div>
+        
+        <!-- Divider -->
+        <span class="hidden md:block text-sm font-bold text-white/50 uppercase tracking-widest">o</span>
+
+        <!-- Right: Beautiful QR Code container -->
+        <div class="flex items-center gap-4 bg-white/10 p-3.5 rounded-3xl border border-white/20 shadow-xs hover:scale-102 transition-transform duration-300 max-w-[280px]">
+          <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center p-1.5 border border-brand-peach/10 shadow-3xs flex-shrink-0">
+            <!-- Sleek styled vector mock QR code -->
+            <svg class="w-full h-full text-brand-peach" viewBox="0 0 100 100" fill="currentColor">
+              <!-- Finder Patterns -->
+              <path d="M 10 10 H 35 V 35 H 10 Z M 15 15 V 30 H 30 V 15 Z M 20 20 H 25 V 25 H 20 Z" />
+              <path d="M 65 10 H 90 V 35 H 65 Z M 70 15 V 30 H 85 V 15 Z M 75 20 H 80 V 25 H 75 Z" />
+              <path d="M 10 65 H 35 V 90 H 10 Z M 15 70 V 85 H 30 V 70 Z M 20 75 H 25 V 80 H 20 Z" />
+              <!-- Data dots -->
+              <path d="M 45 10 H 50 V 15 H 45 Z M 55 10 H 60 V 15 H 55 Z M 45 20 H 55 V 25 H 45 Z M 60 20 H 65 V 25 H 60 Z M 50 30 H 55 V 35 H 50 Z M 60 30 H 65 V 35 H 60 Z" />
+              <path d="M 10 45 H 15 V 50 H 10 Z M 20 45 H 30 V 50 H 20 Z M 35 45 H 40 V 50 H 35 Z M 45 45 H 55 V 50 H 45 Z M 60 45 H 65 V 50 H 60 Z M 70 45 H 85 V 50 H 70 Z" />
+              <path d="M 15 55 H 25 V 60 H 15 Z M 30 55 H 35 V 60 H 30 Z M 40 55 H 45 V 60 H 40 Z M 50 55 H 55 V 60 H 50 Z M 60 55 H 70 V 60 H 60 Z M 80 55 H 85 V 60 H 80 Z" />
+              <path d="M 45 65 H 50 V 70 H 45 Z M 55 65 H 60 V 70 H 55 Z M 65 65 H 70 V 75 H 65 Z M 75 65 H 80 V 70 H 75 Z M 85 65 H 90 V 70 H 85 Z" />
+              <path d="M 45 75 H 50 V 80 H 45 Z M 55 75 H 60 V 80 H 55 Z M 75 75 H 80 V 85 H 75 Z M 85 75 H 90 V 85 H 85 Z" />
+              <path d="M 45 85 H 55 V 90 H 45 Z M 60 85 H 65 V 90 H 60 Z M 70 85 H 75 V 90 H 70 Z" />
+            </svg>
+          </div>
+          <div class="text-left">
+            <h4 class="font-bold text-xs text-white leading-tight">Escanea el código QR</h4>
+            <p class="text-[10px] text-white/80 mt-1 font-medium leading-normal">
+              Apunta con la cámara de tu celular para descargar el APK directamente en tu móvil.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Step Guide -->
+      <div class="w-full border-t border-white/20 pt-10">
+        <h3 class="font-display font-bold text-lg mb-6 tracking-wide">¿Cómo instalar el archivo APK en 3 pasos?</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          
+          <!-- Step 1 -->
+          <div class="bg-white/10 p-5 rounded-2xl border border-white/10 flex items-start gap-4">
+            <span class="w-8 h-8 rounded-full bg-white text-brand-peach font-bold flex items-center justify-center flex-shrink-0 text-sm">1</span>
+            <div>
+              <h4 class="font-bold text-sm mb-1 text-white">Descarga el Archivo</h4>
+              <p class="text-[11px] text-white/80 leading-relaxed font-medium">Haz clic en el botón de arriba para iniciar la descarga segura de <b>lunaybrillo.apk</b> en tu dispositivo Android.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-white/10 p-5 rounded-2xl border border-white/10 flex items-start gap-4">
+            <span class="w-8 h-8 rounded-full bg-white text-brand-peach font-bold flex items-center justify-center flex-shrink-0 text-sm">2</span>
+            <div>
+              <h4 class="font-bold text-sm mb-1 text-white">Autoriza Fuentes</h4>
+              <p class="text-[11px] text-white/80 leading-relaxed font-medium">Si tu celular lo solicita, activa "Instalar aplicaciones de fuentes desconocidas" en los ajustes de seguridad.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-white/10 p-5 rounded-2xl border border-white/10 flex items-start gap-4">
+            <span class="w-8 h-8 rounded-full bg-white text-brand-peach font-bold flex items-center justify-center flex-shrink-0 text-sm">3</span>
+            <div>
+              <h4 class="font-bold text-sm mb-1 text-white">¡Abre y Disfruta!</h4>
+              <p class="text-[11px] text-white/80 leading-relaxed font-medium">Una vez completada la instalación, abre la aplicación, configura tu perfil de bienestar y ¡comienza a brillar!</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
