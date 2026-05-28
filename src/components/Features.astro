@@ -177,4 +177,141 @@
     </div>
   </div>
 
+  <!-- ✨ Sección Novedades -->
+  <div class="mt-20" id="novedades">
+    <!-- Encabezado -->
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="inline-flex items-center gap-2 text-brand-peach font-bold text-xs tracking-widest uppercase bg-brand-soft-pink px-4 py-1.5 rounded-full border border-brand-peach/10 mb-4">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-peach opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-peach"></span>
+        </span>
+        Nueva Actualización v1.0.1
+      </span>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-stone-800 mt-4 mb-4">
+        Lo nuevo en Luna y Brillo ✨
+      </h2>
+      <p class="text-stone-500 font-medium text-base">
+        Pensando siempre en tu comodidad, lanzamos mejoras que hacen tu experiencia más personal y segura.
+      </p>
+    </div>
+
+    <!-- Layout: simulador + tarjetas -->
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+
+      <!-- Simulador de pantalla de app -->
+      <div class="flex-shrink-0 w-full max-w-[260px] mx-auto lg:mx-0">
+        <div class="relative mx-auto" style="width:260px;">
+          <!-- Marco del teléfono -->
+          <div class="relative bg-stone-900 rounded-[42px] shadow-2xl p-[10px]" style="box-shadow: 0 30px 80px rgba(0,0,0,0.25), inset 0 0 0 2px #3f3f46;">
+            <!-- Notch -->
+            <div class="absolute top-[10px] left-1/2 -translate-x-1/2 w-20 h-5 bg-stone-900 rounded-full z-10"></div>
+            <!-- Pantalla -->
+            <div class="bg-[#FFF9F6] rounded-[34px] overflow-hidden" style="height:500px;">
+              <!-- Barra superior -->
+              <div class="bg-white pt-8 pb-3 px-4 border-b border-stone-100">
+                <div class="flex items-center gap-2">
+                  <span class="text-lg">⚙️</span>
+                  <span class="font-bold text-stone-800 text-sm">Ajustes</span>
+                </div>
+              </div>
+              <!-- Contenido -->
+              <div class="overflow-hidden px-3 py-3 space-y-3" style="height:440px;">
+
+                <!-- Tarjeta tipo de cabello con frecuencia -->
+                <div class="bg-white rounded-2xl p-3 shadow-sm border border-stone-100">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-sm">💆‍♀️</span>
+                    <span class="font-bold text-stone-700 text-[11px]">Tipo de cabello</span>
+                    <span class="ml-auto text-[9px] font-bold text-brand-peach bg-brand-soft-pink px-2 py-0.5 rounded-full">✨ Nuevo</span>
+                  </div>
+                  <div class="bg-amber-50 rounded-xl p-2 border border-amber-100">
+                    <p class="text-[9px] text-stone-500 font-medium mb-1">Frecuencia de lavado personalizada</p>
+                    <div class="flex items-center justify-between">
+                      <span class="text-amber-400 text-sm font-bold">−</span>
+                      <span class="font-bold text-stone-800 text-xs">Cada 3 días</span>
+                      <span class="text-amber-400 text-sm font-bold">+</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tarjeta sincronización -->
+                <div class="bg-white rounded-2xl p-3 shadow-sm border border-stone-100">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-sm">🔄</span>
+                    <span class="font-bold text-stone-700 text-[11px]">Sincronización y Datos</span>
+                    <span class="ml-auto text-[9px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">✨ Nuevo</span>
+                  </div>
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="text-xs">☁️</span>
+                    <span class="text-[9px] text-stone-600 font-medium">Conectada a la nube</span>
+                    <span class="ml-auto text-[8px] text-emerald-500 font-bold">● Activo</span>
+                  </div>
+                  <div class="bg-gradient-to-r from-brand-soft-pink to-[#FCD2B3]/40 rounded-xl p-2">
+                    <p class="text-[9px] text-stone-600 font-medium text-center">Sincronizar ahora →</p>
+                  </div>
+                </div>
+
+                <!-- Mini badge -->
+                <div class="flex items-center justify-center gap-1.5 pt-1">
+                  <span class="text-[8px] text-stone-400 font-medium">Simulación de pantalla real</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- Brillo en la pantalla -->
+          <div class="absolute top-12 right-5 w-12 h-32 bg-white/10 rounded-full blur-xl rotate-12 pointer-events-none"></div>
+        </div>
+      </div>
+
+      <!-- Tarjetas de novedades -->
+      <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+
+        <!-- Novedad 1: Frecuencia de lavado -->
+        <div class="relative bg-white rounded-[28px] p-7 border-2 border-amber-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
+          <div class="absolute top-4 right-4">
+            <span class="text-[10px] font-extrabold text-amber-600 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full uppercase tracking-wide">Nuevo</span>
+          </div>
+          <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <span class="text-2xl">💧</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-stone-800 mb-2">
+            Elige tu frecuencia de lavado
+          </h3>
+          <p class="text-stone-500 text-sm leading-relaxed">
+            Ahora puedes definir exactamente cada cuántos días lavas tu cabello. La app se adapta a <em>tu</em> rutina, no al revés.
+          </p>
+          <div class="mt-4 flex items-center gap-2">
+            <span class="h-1.5 w-1.5 rounded-full bg-amber-400"></span>
+            <span class="text-xs text-stone-400 font-medium">En Ajustes → Tipo de cabello</span>
+          </div>
+        </div>
+
+        <!-- Novedad 2: Sincronización -->
+        <div class="relative bg-white rounded-[28px] p-7 border-2 border-emerald-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
+          <div class="absolute top-4 right-4">
+            <span class="text-[10px] font-extrabold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full uppercase tracking-wide">Nuevo</span>
+          </div>
+          <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <span class="text-2xl">☁️</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-stone-800 mb-2">
+            Tu información siempre segura
+          </h3>
+          <p class="text-stone-500 text-sm leading-relaxed">
+            Sincronización automática en la nube para que nunca pierdas tus registros. ¡Tu tranquilidad nos importa! 💖
+          </p>
+          <div class="mt-4 flex items-center gap-2">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+            <span class="text-xs text-stone-400 font-medium">En Ajustes → Sincronización y Datos</span>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
 </section>
