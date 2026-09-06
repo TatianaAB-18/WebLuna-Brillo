@@ -5,12 +5,13 @@
   --font-sans: 'Quicksand', system-ui, -apple-system, sans-serif;
   --font-display: 'Fredoka', sans-serif;
   
-  --color-brand-cream: #FFF9F6;
-  --color-brand-peach: #E88A76;
-  --color-brand-peach-hover: #D67A66;
-  --color-brand-coral: #FCE2DB;
-  --color-brand-soft-pink: #FDECE8;
-  --color-brand-rose: #FFAAA6;
+  /* Paleta extraída del nuevo logo Luna & Brillo */
+  --color-brand-cream: #FEF0F5;          /* Fondo principal: blanco rosado suave (aureola exterior del logo) */
+  --color-brand-peach: #8B1A5C;          /* Color primario: fucsia/magenta oscuro del texto del logo */
+  --color-brand-peach-hover: #6D1247;    /* Hover del primario: magenta más oscuro */
+  --color-brand-coral: #E88A76;          /* Coral/salmón: color dominante del degradado del logo */
+  --color-brand-soft-pink: #FCE2DB;      /* Fondo suave: rosa claro del degradado interior del logo */
+  --color-brand-rose: #CF7494;           /* Secundario: rosa-magenta medio del logo */
   
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -42,25 +43,25 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFF9F6;
+  background: #FEF0F5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FCE2DB;
+  background: #E88A76;
   border-radius: 10px;
-  border: 2px solid #FFF9F6;
+  border: 2px solid #FEF0F5;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #E88A76;
+  background: #8B1A5C;
 }
 
 /* Glassmorphism utility */
 .glass-panel {
-  background: rgba(255, 249, 246, 0.96);
+  background: rgba(254, 240, 245, 0.96);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(232, 138, 118, 0.2);
+  border: 1px solid rgba(232, 138, 118, 0.20);
 }
 
 .glass-card {
