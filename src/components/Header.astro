@@ -1,44 +1,62 @@
 ---
 ---
-<header class="sticky top-4 z-50 mt-4 mx-4 lg:mx-12 px-6 py-4 rounded-3xl glass-panel shadow-xs transition-all duration-300 flex items-center justify-between border border-brand-soft-pink">
-  <!-- Logo -->
+<header class="sticky top-4 z-50 mt-4 mx-4 lg:mx-12 px-6 py-3.5 rounded-3xl glass-panel shadow-sm transition-all duration-300 flex items-center justify-between border border-[#DF7591]/30">
+  <!-- Brand Logo -->
   <a href="#" class="flex items-center gap-3 group">
-    <div class="relative w-11 h-11 flex items-center justify-center bg-gradient-to-br from-brand-peach/10 to-brand-rose/10 rounded-2xl shadow-2xs group-hover:scale-105 transition-transform duration-300 p-0.5 border border-brand-peach/20">
-      <img src="/images/app-logo.png" alt="Luna y Brillo" class="w-full h-full object-contain rounded-xl" />
-      <!-- Sparkle -->
+    <div class="relative w-11 h-11 flex items-center justify-center bg-gradient-to-br from-[#70163C]/10 to-[#DF7591]/20 rounded-2xl shadow-sm group-hover:scale-105 transition-transform duration-300 p-1 border border-[#DF7591]/30">
+      <img src="/logo.png" alt="Luna y Brillo" class="w-full h-full object-contain rounded-xl" />
+      <!-- Ping Sparkle -->
       <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-rose opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-brand-coral border border-white"></span>
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#DF7591] opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#70163C] border border-white"></span>
       </span>
     </div>
     <div>
-      <span class="font-display font-bold text-xl tracking-wide bg-gradient-to-r from-brand-peach to-brand-rose bg-clip-text text-transparent">Luna y Brillo</span>
-      <span class="block text-[10px] text-stone-500 font-medium tracking-widest uppercase">Cuidado Personal</span>
+      <span class="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-[#70163C] via-[#A22C58] to-[#DF7591] bg-clip-text text-transparent">Luna & Brillo</span>
+      <span class="block text-[10px] text-[#7A5C68] font-bold tracking-widest uppercase">Autocuidado & Bienestar</span>
     </div>
   </a>
 
   <!-- Desktop Navigation -->
-  <nav class="hidden md:flex items-center gap-8 font-semibold text-stone-600">
-    <a href="#" class="hover:text-brand-peach transition-colors duration-200">Inicio</a>
-    <a href="#features" class="hover:text-brand-peach transition-colors duration-200">Características</a>
-    <a href="#showcase" class="hover:text-brand-peach transition-colors duration-200">Interactuar</a>
-    <a href="#download" class="hover:text-brand-peach transition-colors duration-200">Descargar</a>
+  <nav class="hidden lg:flex items-center gap-7 font-bold text-sm text-[#7A5C68]">
+    <a href="#" class="hover:text-[#70163C] transition-colors duration-200">Inicio</a>
+    <a href="#modo-pareja" class="hover:text-[#70163C] transition-colors duration-200 flex items-center gap-1.5 text-[#70163C]">
+      <span>Modo Pareja</span>
+      <span class="text-[9px] uppercase tracking-wider bg-[#FCE8EE] text-[#70163C] font-extrabold px-2 py-0.5 rounded-full border border-[#DF7591]/40">Nuevo</span>
+    </a>
+    <a href="#showcase" class="hover:text-[#70163C] transition-colors duration-200">Simulador en Vivo</a>
+    <a href="#features" class="hover:text-[#70163C] transition-colors duration-200">Nuevos Módulos</a>
+    <a href="#widgets" class="hover:text-[#70163C] transition-colors duration-200">Widgets</a>
+    <a href="#download" class="hover:text-[#70163C] transition-colors duration-200">Descargar</a>
   </nav>
 
-  <!-- CTA Download -->
+  <!-- CTA Buttons -->
   <div class="flex items-center gap-3">
+    <!-- Live Demo Partner Mode Button -->
+    <a 
+      href="/pareja.html" 
+      target="_blank" 
+      class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-2xl text-xs font-bold bg-[#FCE8EE] hover:bg-[#fbd3de] text-[#70163C] border border-[#DF7591]/40 transition-all hover:scale-102 shadow-2xs"
+    >
+      <span>Ver Modo Pareja</span>
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+      </svg>
+    </a>
+
+    <!-- Download APK Button -->
     <a 
       href="#download" 
-      class="bg-brand-peach hover:bg-brand-peach-hover text-white px-5 py-2.5 rounded-2xl font-bold shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 text-sm md:text-base flex items-center gap-2"
+      class="bg-gradient-to-r from-[#70163C] to-[#8E2150] hover:from-[#8E2150] hover:to-[#70163C] text-white px-5 py-2.5 rounded-2xl font-bold shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 text-xs sm:text-sm flex items-center gap-2"
     >
-      <span>Instalar App</span>
+      <span>Descargar APK</span>
       <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
       </svg>
     </a>
     
-    <!-- Mobile Menu Button (Hamburger) -->
-    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl hover:bg-brand-soft-pink text-stone-600 transition-colors" aria-label="Abrir Menú">
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl hover:bg-[#FCE8EE] text-[#70163C] transition-colors" aria-label="Abrir Menú">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
       </svg>
@@ -47,28 +65,41 @@
 </header>
 
 <!-- Mobile Navigation Drawer -->
-<div id="mobile-menu" class="fixed inset-0 z-40 bg-brand-cream/95 backdrop-blur-md hidden flex-col justify-center items-center gap-8 p-6 transition-all duration-300">
-  <!-- Close Button -->
-  <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 rounded-xl hover:bg-brand-soft-pink text-stone-600" aria-label="Cerrar Menú">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<div id="mobile-menu" class="fixed inset-0 z-50 bg-[#FFF7F9]/98 backdrop-blur-xl hidden flex-col justify-center items-center gap-6 p-6 transition-all duration-300">
+  <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 rounded-xl hover:bg-[#FCE8EE] text-[#70163C]" aria-label="Cerrar Menú">
+    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
     </svg>
   </button>
   
-  <a href="#" class="font-display font-bold text-3xl text-brand-peach hover:scale-105 transition-transform">Inicio</a>
-  <a href="#features" class="font-display font-bold text-3xl text-brand-peach hover:scale-105 transition-transform">Características</a>
-  <a href="#showcase" class="font-display font-bold text-3xl text-brand-peach hover:scale-105 transition-transform">Interactuar</a>
-  <a href="#download" class="font-display font-bold text-3xl text-brand-peach hover:scale-105 transition-transform">Descargar</a>
-  
-  <a 
-    href="#download" 
-    class="mt-6 bg-brand-peach text-white px-8 py-4 rounded-3xl font-bold shadow-md text-lg flex items-center gap-2 hover:scale-105 transition-transform"
-  >
-    <span>Descargar APK</span>
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
-    </svg>
+  <a href="#" class="font-display font-bold text-2xl text-[#70163C] hover:scale-105 transition-transform">Inicio</a>
+  <a href="#modo-pareja" class="font-display font-bold text-2xl text-[#DF7591] hover:scale-105 transition-transform flex items-center gap-2">
+    <span>Modo Pareja</span>
+    <span class="text-xs font-sans uppercase bg-[#70163C] text-white px-2 py-0.5 rounded-full">Nuevo</span>
   </a>
+  <a href="#showcase" class="font-display font-bold text-2xl text-[#70163C] hover:scale-105 transition-transform">Simulador en Vivo</a>
+  <a href="#features" class="font-display font-bold text-2xl text-[#70163C] hover:scale-105 transition-transform">Nuevos Módulos</a>
+  <a href="#widgets" class="font-display font-bold text-2xl text-[#70163C] hover:scale-105 transition-transform">Widgets Android</a>
+  <a href="#download" class="font-display font-bold text-2xl text-[#70163C] hover:scale-105 transition-transform">Descargar APK</a>
+  
+  <div class="flex flex-col gap-3 w-full max-w-xs mt-4">
+    <a 
+      href="/pareja.html" 
+      target="_blank"
+      class="bg-[#FCE8EE] text-[#70163C] border border-[#DF7591]/50 px-6 py-3.5 rounded-2xl font-bold text-center text-sm shadow-xs"
+    >
+      Ver Modo Pareja en Vivo 💕
+    </a>
+    <a 
+      href="#download" 
+      class="bg-gradient-to-r from-[#70163C] to-[#8E2150] text-white px-6 py-3.5 rounded-2xl font-bold shadow-md text-center text-sm flex items-center justify-center gap-2"
+    >
+      <span>Descargar APK Gratis</span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+      </svg>
+    </a>
+  </div>
 </div>
 
 <script>

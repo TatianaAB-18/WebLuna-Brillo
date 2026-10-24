@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Luna & Brillo — Modo Pareja 💕</title>
+  <meta name="description" content="Mira cómo se siente tu pareja hoy, en qué fase de su ciclo está y cómo cuidarla y consentirla con amor.">
+  <meta name="theme-color" content="#70163C">
+
+  <!-- Open Graph / WhatsApp Preview Tags -->
+  <meta property="og:title" content="Luna & Brillo 💕 — Modo Pareja">
+  <meta property="og:description" content="Mira cómo me siento hoy y cómo puedes consentirme ✨">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://luna-y-brillo.web.app/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #70163C;
+      --primary-light: #8E2150;
+      --secondary: #DF7591;
+      --secondary-light: #FCE8EE;
+      --accent: #E8A598;
+      --gold: #F4C430;
+      --bg: #FFF7F9;
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --card-border: rgba(223, 117, 145, 0.25);
+      --text-dark: #2D141E;
+      --text-muted: #7A5C68;
+      --radius: 24px;
+      --shadow: 0 12px 36px rgba(112, 22, 60, 0.08);
+      --shadow-hover: 0 16px 44px rgba(112, 22, 60, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(175deg, #FFF0F4 0%, #FFF8FA 40%, #FDE4EB 100%);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 16px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Floating glowing elements */
+    .glow-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.55;
+      animation: floatOrb 14s ease-in-out infinite alternate;
+    }
+    .orb-1 {
+      width: 280px;
+      height: 280px;
+      background: rgba(223, 117, 145, 0.45);
+      top: -80px;
+      right: -80px;
+    }
+    .orb-2 {
+      width: 320px;
+      height: 320px;
+      background: rgba(112, 22, 60, 0.2);
+      bottom: -60px;
+      left: -80px;
+      animation-duration: 18s;
+    }
+
+    @keyframes floatOrb {
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(30px) scale(1.1); }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 40px;
+    }
+
+    /* Top Brand Bar */
+    .brand-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 6px 20px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo img {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      object-fit: contain;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(112, 22, 60, 0.12);
+    }
+
+    .brand-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.3px;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(223, 117, 145, 0.18);
+      color: var(--primary);
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: linear-gradient(135deg, #70163C 0%, #A22C58 60%, #DF7591 100%);
+      color: white;
+      border-radius: var(--radius);
+      padding: 24px 22px;
+      box-shadow: 0 16px 36px rgba(112, 22, 60, 0.25);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -30%;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-sub {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 4px;
+    }
+
+    .hero-partner-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .phase-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(8px);
+      padding: 8px 16px;
+      border-radius: 99px;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .cycle-progress-wrap {
+      background: rgba(0, 0, 0, 0.18);
+      border-radius: 12px;
+      padding: 10px 14px;
+    }
+
+    .cycle-progress-text {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      opacity: 0.95;
+    }
+
+    .cycle-bar {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .cycle-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #FDE8EE, #F4C430);
+      border-radius: 99px;
+      width: 20%;
+      transition: width 1s ease;
+    }
+
+    /* Content Cards */
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--card-border);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+
+    .card-title-icon {
+      font-size: 20px;
+    }
+
+    /* Mood Chips */
+    .chips-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .mood-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FFF0F4;
+      border: 1px solid rgba(223, 117, 145, 0.35);
+      color: var(--primary);
+      padding: 8px 14px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(112, 22, 60, 0.04);
+      animation: popIn 0.3s ease;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.85); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Energy meter */
+    .energy-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #FFF7F9;
+      border: 1px solid rgba(223, 117, 145, 0.2);
+      border-radius: 16px;
+      padding: 12px 16px;
+      margin-top: 10px;
+    }
+
+    .energy-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .energy-val {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    /* Special Wish Box */
+    .wish-box {
+      background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+      border: 1px solid rgba(244, 196, 48, 0.4);
+      border-radius: 18px;
+      padding: 16px;
+      margin-top: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .wish-icon {
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .wish-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #9C5700;
+      margin-bottom: 2px;
+    }
+
+    .wish-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: #5D3700;
+      line-height: 1.35;
+    }
+
+    /* Note Box */
+    .note-box {
+      background: #FFF5F7;
+      border-left: 4px solid var(--secondary);
+      border-radius: 0 16px 16px 0;
+      padding: 14px 16px;
+      font-style: italic;
+      color: var(--text-dark);
+      font-size: 14px;
+      line-height: 1.45;
+      margin-top: 12px;
+    }
+
+    /* Checklist / bullets */
+    .tips-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .tips-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #4A2B37;
+      line-height: 1.45;
+    }
+
+    .tips-bullet {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--secondary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Action Buttons */
+    .action-section {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 99px;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(37, 211, 102, 0.45);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 1.5px solid rgba(112, 22, 60, 0.2);
+    }
+
+    .btn-secondary:hover {
+      background: #FFF0F4;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 30px;
+      line-height: 1.5;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(45, 20, 30, 0.95);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 600;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Timestamp badge */
+    .time-badge {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="brand-header">
+      <div class="brand-logo">
+        <img src="logo.png" alt="Luna & Brillo Logo" onerror="this.style.display='none'">
+        <div class="brand-title">Luna & Brillo</div>
+      </div>
+      <div class="brand-badge">Modo Pareja 💑</div>
+    </header>
+
+    <!-- Hero Card -->
+    <div class="hero-card">
+      <div class="hero-sub">Estado de hoy para ti</div>
+      <h1 class="hero-partner-name" id="userName">Mi Amor 💕</h1>
+      <div class="phase-pill" id="phasePill">
+        <span id="phaseEmoji">🌸</span>
+        <span id="phaseName">Fase del Ciclo</span>
+      </div>
+      <div class="cycle-progress-wrap">
+        <div class="cycle-progress-text">
+          <span id="cycleDayText">Día en su ciclo</span>
+          <span id="cyclePercentText">0%</span>
+        </div>
+        <div class="cycle-bar">
+          <div class="cycle-bar-fill" id="cycleBarFill"></div>
+        </div>
+      </div>
+      <div class="time-badge" id="updatedTime">Actualizado hoy</div>
+    </div>
+
+    <!-- ¿Cómo se siente hoy? -->
+    <div class="card">
+      <div class="card-title">
+        <span class="card-title-icon">💭</span>
+        <span>¿Cómo me siento hoy?</span>
+      </div>
+
+      <div class="chips-grid" id="moodChips">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="energy-row">
+        <span class="energy-label">Nivel de energía física & anímica</span>
+        <span class="energy-val" id="energyValue">⚡ Normal</span>
+      </div>
+
+      <div id="wishBoxWrap">
+        <!-- Optional wish box -->
+      </div>
+
+      <div id="noteBoxWrap">
+        <!-- Optional personal note -->
+      </div>
+    </div>
+
+    <!-- Guía de oro para ti -->
+    <div class="card">
+      <div class="card-title">
+        <span class="card-title-icon">💡</span>
+        <span>Guía de oro para cuidarla hoy</span>
+      </div>
+      <p id="feelingsExplain" style="font-size: 13.5px; color: var(--text-dark); line-height: 1.5; margin-bottom: 14px;"></p>
+      <ul class="tips-list" id="tipsList">
+        <!-- Rendered dynamically -->
+      </ul>
+    </div>
+
+    <!-- Detalles que le alegrarán el día -->
+    <div class="card">
+      <div class="card-title">
+        <span class="card-title-icon">🎁</span>
+        <span>Detalles que le alegrarán el día</span>
+      </div>
+      <p id="giftsContent" style="font-size: 13.5px; color: var(--text-dark); line-height: 1.5;"></p>
+    </div>
+
+    <!-- Action Section -->
+    <div class="action-section">
+      <a id="btnWhatsApp" href="#" target="_blank" class="btn btn-whatsapp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 1.943.924 3.15.924 3.182 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.766-5.768-5.766zm9.969 5.766c0 5.514-4.485 9.999-10 9.999-1.758 0-3.4-.455-4.834-1.249l-5.166 1.312 1.354-4.945c-.887-1.488-1.354-3.197-1.354-5.117 0-5.514 4.486-10 10-10 5.515 0 10 4.486 10 10z"/>
+        </svg>
+        Responderle con amor por WhatsApp 💌
+      </a>
+      <button id="btnCopyReply" class="btn btn-secondary">
+        Copiar mensajito cariñoso 📋
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Hecho con mucho amor para ti y tu pareja en <strong>Luna & Brillo</strong> ✨<br>
+      La empatía y el cuidado mutuo fortalecen el amor.
+    </footer>
+  </div>
+
+  <div id="toast" class="toast">Mensajito copiado al portapapeles ✨</div>
+
+  <script>
+    // Parse data from URL hash or query params
+    function getData() {
+      try {
+        let hash = window.location.hash;
+        let search = window.location.search;
+        let raw = '';
+
+        if (hash.includes('data=')) {
+          raw = hash.split('data=')[1].split('&')[0];
+        } else if (search.includes('data=')) {
+          const params = new URLSearchParams(search);
+          raw = params.get('data');
+        }
+
+        if (raw) {
+          // Decode URL safe Base64
+          const decodedStr = decodeURIComponent(escape(atob(raw.replace(/-/g, '+').replace(/_/g, '/'))));
+          return JSON.parse(decodedStr);
+        }
+      } catch (e) {
+        console.warn('Error parsing data payload:', e);
+      }
+      return null;
+    }
+
+    // Default template data if opened without parameters
+    const defaultData = {
+      name: "Ella",
+      phase: "Fase Lútea / Premenstrual",
+      phaseEmoji: "🌾",
+      day: 22,
+      totalDays: 28,
+      date: "Hoy",
+      moods: ["Sensible 🥺", "Cansada 😴", "Con antojos 🍫", "Necesito un abrazo 🫂"],
+      energy: "Baja 🔋",
+      wish: "Un postre rico y un abrazo largo sin prisas 🍫🫂",
+      note: "Hoy me siento un poquito cansada y sensible. Gracias por tu comprensión y por ser tan lindo conmigo 💕",
+      feelingsAdvice: "Es común experimentar mayor sensibilidad emocional, cansancio o antojos en esta fase. Su cuerpo se está preparando para renovar su ciclo.",
+      tips: [
+        "Tenle mucha paciencia y no te tomes nada personal.",
+        "Prepárale su comida favorita o un té caliente reconfortante.",
+        "Un abrazo suave y preguntarle cómo estuvo su día hace maravillas."
+      ],
+      gifts: "Chocolate oscuro, mimos en la espalda, comida rica y cero estrés."
+    };
+
+    const data = getData() || defaultData;
+
+    // Render UI
+    document.addEventListener('DOMContentLoaded', () => {
+      // Name
+      const partnerName = data.name || "Ella";
+      document.getElementById('userName').textContent = partnerName + " 💕";
+      document.title = `${partnerName} — Mi estado hoy 💕 (Luna & Brillo)`;
+
+      // Phase & Cycle
+      document.getElementById('phaseName').textContent = data.phase || "Fase del Ciclo";
+      document.getElementById('phaseEmoji').textContent = data.phaseEmoji || "🌙";
+
+      const day = parseInt(data.day) || 1;
+      const totalDays = parseInt(data.totalDays) || 28;
+      const percent = Math.min(100, Math.max(5, Math.round((day / totalDays) * 100)));
+
+      document.getElementById('cycleDayText').textContent = `Día ${day} de ${totalDays} en su ciclo`;
+      document.getElementById('cyclePercentText').textContent = `${percent}%`;
+      document.getElementById('cycleBarFill').style.width = `${percent}%`;
+
+      if (data.date) {
+        document.getElementById('updatedTime').textContent = `Actualizado: ${data.date}`;
+      }
+
+      // Moods
+      const moodsWrap = document.getElementById('moodChips');
+      moodsWrap.innerHTML = '';
+      const moods = Array.isArray(data.moods) && data.moods.length > 0 
+        ? data.moods 
+        : ["Amorosa 🥰", "Tranquila ✨"];
+
+      moods.forEach(m => {
+        const chip = document.createElement('div');
+        chip.className = 'mood-chip';
+        chip.textContent = m;
+        moodsWrap.appendChild(chip);
+      });
+
+      // Energy
+      document.getElementById('energyValue').textContent = data.energy || "Normal ⚡";
+
+      // Wish Box
+      if (data.wish && data.wish.trim().length > 0) {
+        const wishWrap = document.getElementById('wishBoxWrap');
+        wishWrap.innerHTML = `
+          <div class="wish-box">
+            <div class="wish-icon">🎁</div>
+            <div>
+              <div class="wish-title">Lo que le alegraría el día hoy</div>
+              <div class="wish-text">${escapeHtml(data.wish)}</div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Note Box
+      if (data.note && data.note.trim().length > 0) {
+        const noteWrap = document.getElementById('noteBoxWrap');
+        noteWrap.innerHTML = `
+          <div class="note-box">
+            <strong>Mensajito de ${escapeHtml(partnerName)}:</strong><br>
+            "${escapeHtml(data.note)}"
+          </div>
+        `;
+      }
+
+      // Feelings Explain
+      document.getElementById('feelingsExplain').textContent = data.feelingsAdvice || "";
+
+      // Tips List
+      const tipsList = document.getElementById('tipsList');
+      tipsList.innerHTML = '';
+      const tips = Array.isArray(data.tips) ? data.tips : (data.tips ? data.tips.split('\n') : []);
+      
+      tips.forEach((tip, idx) => {
+        const cleanTip = tip.replace(/^[•\-\*]\s*/, '').trim();
+        if (!cleanTip) return;
+        const li = document.createElement('li');
+        li.className = 'tips-item';
+        li.innerHTML = `
+          <div class="tips-bullet">${idx + 1}</div>
+          <div>${escapeHtml(cleanTip)}</div>
+        `;
+        tipsList.appendChild(li);
+      });
+
+      // Gifts
+      document.getElementById('giftsContent').textContent = data.gifts || "Un abrazo cariñoso, palabras de aliento y un detalle dulce.";
+
+      // WhatsApp Message setup
+      const replyMessage = `Hola mi amor ${partnerName} ❤️ Acabo de ver tu estado en Luna & Brillo. Quiero consentirte mucho hoy y cuidarte. ¿Te puedo llevar algo rico o hacerte masajitos? 🥰✨`;
+      const waUrl = `https://wa.me/?text=${encodeURIComponent(replyMessage)}`;
+      document.getElementById('btnWhatsApp').href = waUrl;
+
+      // Copy reply button
+      document.getElementById('btnCopyReply').addEventListener('click', () => {
+        navigator.clipboard.writeText(replyMessage).then(() => {
+          showToast('¡Mensajito de amor copiado! Pégalo en su chat 💕');
+        }).catch(() => {
+          showToast('Copiado con éxito ✨');
+        });
+      });
+    });
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  </script>
+</body>
+</html>

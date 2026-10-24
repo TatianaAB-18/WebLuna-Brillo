@@ -1,0 +1,21 @@
+---
+// Page route for /pareja - redirects client to /pareja.html preserving search and hash
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirigiendo al Modo Pareja... | Luna & Brillo</title>
+  <meta http-equiv="refresh" content="0; url=/pareja.html">
+  <script is:inline>
+    const target = '/pareja.html' + window.location.search + window.location.hash;
+    window.location.replace(target);
+  </script>
+</head>
+<body style="font-family: 'Plus Jakarta Sans', sans-serif; background: #FFF7F9; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; color: #70163C;">
+  <div style="text-align: center; padding: 24px;">
+    <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 8px;">Cargando Modo Pareja 💕</h2>
+    <p style="font-size: 14px; opacity: 0.8;">Sincronizando información de tu pareja en tiempo real...</p>
+  </div>
+</body>
+</html>

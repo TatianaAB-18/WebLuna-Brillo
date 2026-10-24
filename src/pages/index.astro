@@ -2,23 +2,27 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import PartnerSection from '../components/PartnerSection.astro';
 import Features from '../components/Features.astro';
 import DownloadSection from '../components/DownloadSection.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-  <!-- Header -->
+  <!-- Header with Brand Navigation & Live Demo link -->
   <Header />
   
   <main class="flex-grow">
-    <!-- Hero Section with Smartphone Mockup -->
+    <!-- Hero Section with Interactive Smartphone Simulator -->
     <Hero />
     
-    <!-- Detailed Feature Cards for Cycle, Hair, Skincare -->
+    <!-- Dedicated Modo Pareja Section with Glassmorphism Showcase & Live Demo -->
+    <PartnerSection />
+    
+    <!-- All New Modules: Cosméticos, Google Fit, PDF Reports, Android Widget & Services -->
     <Features />
     
-    <!-- direct APK download block -->
+    <!-- Direct APK Download Section with QR Code -->
     <DownloadSection />
   </main>
   

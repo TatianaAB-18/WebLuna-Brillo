@@ -1,19 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Quicksand:wght@300..700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Quicksand', system-ui, -apple-system, sans-serif;
-  --font-display: 'Fredoka', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Quicksand', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --font-playful: 'Fredoka', cursive;
   
-  /* Paleta extraída del nuevo logo Luna & Brillo */
-  --color-brand-cream: #FEF0F5;          /* Fondo principal: blanco rosado suave (aureola exterior del logo) */
-  --color-brand-peach: #8B1A5C;          /* Color primario: fucsia/magenta oscuro del texto del logo */
-  --color-brand-peach-hover: #6D1247;    /* Hover del primario: magenta más oscuro */
-  --color-brand-coral: #E88A76;          /* Coral/salmón: color dominante del degradado del logo */
-  --color-brand-soft-pink: #FCE2DB;      /* Fondo suave: rosa claro del degradado interior del logo */
-  --color-brand-rose: #CF7494;           /* Secundario: rosa-magenta medio del logo */
+  /* Paleta refinada Luna & Brillo: Borgoña, Rosa Suave y Acentos Cálidos */
+  --color-brand-burgundy: #70163C;         /* Color insignia: borgoña elegante */
+  --color-brand-burgundy-hover: #8E2150;   /* Borgoña claro para hovers */
+  --color-brand-peach: #70163C;            /* Alias primario */
+  --color-brand-peach-hover: #8E2150;
+  --color-brand-rose: #DF7591;             /* Rosa suave principal */
+  --color-brand-soft-pink: #FCE8EE;        /* Fondo rosa tenue y translúcido */
+  --color-brand-coral: #E8A598;            /* Coral/salmón cálido */
+  --color-brand-gold: #F4C430;             /* Dorado lunar / acento cálido */
+  --color-brand-cream: #FFF7F9;            /* Fondo principal blanco rosado suave */
+  --color-brand-dark: #2D141E;             /* Texto oscuro elegante */
   
   --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: floatOrb 14s ease-in-out infinite alternate;
   --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   
   @keyframes float {
@@ -21,52 +27,103 @@
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(-15px);
+      transform: translateY(-12px);
     }
+  }
+
+  @keyframes floatOrb {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(30px) scale(1.1); }
   }
 }
 
-/* Custom styles and scrollbar */
+/* Custom styles and smooth scrollbar */
 html {
   scroll-behavior: smooth;
   background-color: var(--color-brand-cream);
   font-family: var(--font-sans);
+  color: #2D141E;
 }
 
 body {
   overflow-x: hidden;
+  background: linear-gradient(175deg, #FFF0F4 0%, #FFF7F9 45%, #FDE4EB 100%);
+  min-height: 100vh;
 }
 
-/* Custom scrollbar to match aesthetic */
+/* Custom scrollbar to match premium aesthetic */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #FEF0F5;
+  background: #FFF7F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #E88A76;
+  background: #DF7591;
   border-radius: 10px;
-  border: 2px solid #FEF0F5;
+  border: 2px solid #FFF7F9;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8B1A5C;
+  background: #70163C;
 }
 
-/* Glassmorphism utility */
+/* Glassmorphism utility classes */
 .glass-panel {
-  background: rgba(254, 240, 245, 0.96);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(232, 138, 118, 0.20);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(223, 117, 145, 0.25);
+  box-shadow: 0 12px 32px rgba(112, 22, 60, 0.06);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(223, 117, 145, 0.22);
+  box-shadow: 0 10px 30px rgba(112, 22, 60, 0.05);
+}
+
+.glass-card-dark {
+  background: linear-gradient(135deg, rgba(112, 22, 60, 0.95) 0%, rgba(142, 33, 80, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.glass-pill {
+  background: rgba(223, 117, 145, 0.15);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(223, 117, 145, 0.3);
+}
+
+/* Floating glow orbs */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.55;
+  animation: floatOrb 14s ease-in-out infinite alternate;
+}
+
+.orb-primary {
+  background: rgba(223, 117, 145, 0.45);
+}
+
+.orb-burgundy {
+  background: rgba(112, 22, 60, 0.22);
+}
+
+.orb-gold {
+  background: rgba(244, 196, 48, 0.25);
+}
+
+@keyframes floatOrb {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(30px) scale(1.1); }
 }
